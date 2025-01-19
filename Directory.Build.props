@@ -1,0 +1,17 @@
+<Project>
+  <!-- Common NuGet settings for all projects -->
+  <ItemGroup>
+    <!-- Add SonarAnalyzer.CSharp package for all projects -->
+    <PackageReference
+      Include="SonarAnalyzer.CSharp"
+      Version="*"
+      PrivateAssets="all"
+      Condition="$(MSBuildProjectExtension) == '.csproj'" />
+    <PackageReference
+      Include="Roslynator.Analyzers"
+      Version="*"
+      PrivateAssets="all"
+      Condition="$(MSBuildProjectExtension) == '.csproj'" />
+  </ItemGroup>
+
+</Project>
